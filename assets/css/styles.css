@@ -1,0 +1,576 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --primary: #6366F1;
+    --primary-dark: #4F46E5;
+    --accent: #8B5CF6;
+    --text-main: #051431;
+    --text-muted: #6B7280;
+    --bg-soft: #F3F4FF;
+    --shadow-soft: 0 10px 30px rgba(99,102,241,0.15);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    z-index: 1000;
+}
+
+.nav-container {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+}
+/* =========================
+   HAMBURGER FIXED ANIMATION
+========================= */
+
+.hamburger .line {
+    transition: all 0.3s ease;
+    transform-origin: 6px 12px; /* centro exacto del SVG */
+}
+
+.menu-toggle.active .top {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .middle {
+    opacity: 0;
+}
+
+.menu-toggle.active .bottom {
+    transform: rotate(-45deg);
+}
+
+/* =========================
+   NAV PANEL MOBILE
+========================= */
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 50%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 70px 30px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.35s ease;
+    z-index: 1100;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Activo */
+.nav-links.active {
+    right: 0;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1200;
+}
+/* =========================
+   HERO IMPACTANTE
+========================= */
+
+.hero {
+    position: relative;
+    padding: 80px 1.5rem 30px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        rgba(99,102,241,0.12),
+        rgba(139,92,246,0.12)
+    );
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    filter: blur(80px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background-clip: text;              /* estándar */
+    -webkit-background-clip: text; 
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.4rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(99,102,241,0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(99,102,241,0.45);
+}
+
+.btn-secondary {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary-dark);
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   SEPARADORES
+========================= */
+
+.section-divider {
+    background: linear-gradient(
+        135deg,
+        rgba(99,102,241,0.08),
+        rgba(139,92,246,0.08)
+    );
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(99,102,241,0.15);
+    border-bottom: 1px solid rgba(99,102,241,0.15);
+}
+
+.divider-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-divider h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+
+    background-clip: text;              /* estándar */
+    -webkit-background-clip: text;      /* Safari / Chrome */
+
+    color: transparent;
+}
+
+.section-divider p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================
+   PERFUME SECTIONS
+========================= */
+
+.perfume-section {
+    padding: 2rem 1.5rem;
+}
+
+.perfume-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* =========================
+   TARJETA PERFUME
+========================= */
+
+.perfume-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.perfume-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.perfume-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(99,102,241,0.18);
+}
+
+.perfume-card img {
+    width: 100%;
+    display: block;
+}
+
+.perfume-info {
+    padding: 1.2rem;
+}
+
+.perfume-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.perfume-info p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+.load-more-container{
+    margin-top: 25px;
+}
+/* =========================
+   INFO SECTION
+========================= */
+
+.info-section {
+    padding: 2rem 1.5rem;
+}
+
+.info-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.info-container ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    background: #111111;
+    color: white;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1050;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* =========================
+   STORE SECTION
+========================= */
+
+.store-section {
+    padding: 2rem 1.5rem;
+}
+
+.store-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.store-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(99,102,241,0.18);
+}
+
+.store-card img {
+    width: 100%;
+    display: block;
+}
+
+.store-info {
+    padding: 1.5rem;
+}
+
+.store-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.store-info p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.store-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Desktop mejora */
+
+@media (min-width: 768px) {
+
+    .store-card {
+        display: flex;
+    }
+
+    .store-card img {
+        width: 45%;
+        object-fit: cover;
+    }
+
+    .store-info {
+        width: 55%;
+    }
+
+    .store-links {
+        flex-direction: row;
+    }
+}
+/* =========================
+   AUTH SECTION
+========================= */
+
+.auth-section {
+    padding: 2rem 1.5rem;
+}
+
+.auth-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.auth-card {
+    padding: 1.8rem;
+    border-radius: 18px;
+    background: white;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Original */
+
+.auth-card.good {
+    border-left: 6px solid #22C55E;
+}
+
+.auth-card.good h3 {
+    color: #16A34A;
+}
+
+/* Advertencia */
+
+.auth-card.warning {
+    border-left: 6px solid #EF4444;
+}
+
+.auth-card.warning h3 {
+    color: #DC2626;
+}
+
+.auth-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.auth-card ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+    .auth-container {
+        flex-direction: row;
+    }
+
+    .auth-card {
+        width: 50%;
+    }
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 2.5rem 1.5rem;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(99,102,241,0.18);
+}
+
+.about-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background-clip: text;              /* estándar */
+    -webkit-background-clip: text;  
+}
+
+.about-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.about-links {
+    margin-top: 1.5rem;
+}

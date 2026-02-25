@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Radar | Perfumes originales en Mercado Libre</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">PERFUME OFERTAS</div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+    <svg class="hamburger" width="26" height="26" viewBox="0 0 24 24">
+        <line class="line top" x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line class="line middle" x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line class="line bottom" x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+</button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#tendencias">Tendencias</a>
+                <a href="#como-comprar">Cómo comprar</a>
+                <a href="#tiendas">Tiendas</a>
+                <a href="#sobre-mi">Sobre mí</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Encuentra perfumes originales en Mercado Libre</h1>
+            <p>Solo tiendas verificadas y ofertas reales actualizadas constantemente.</p>
+        </div>
+    </section>
+
+    <!-- SEPARADOR TENDENCIAS -->
+    <section class="section-divider">
+        <div class="divider-content">
+            <div class="divider-title">
+                <!-- Fire SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C10 5 14 7 14 10C14 12 12.5 13.5 12 14C11.5 13.5 10 12 10 10C10 7 14 5 12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                    <path d="M12 14C9 16 9 20 12 22C15 20 15 16 12 14Z"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                </svg>
+                <h2>Tendencias del momento</h2>
+            </div>
+            <p>Perfumes virales y ofertas destacadas</p>
+        </div>
+    </section>
+
+    <section id="tendencias" class="perfume-section">
+        <div class="perfume-container" id="tendencias-container"></div>
+    </section>
+
+    <!-- SEPARADOR TODOS -->
+    <section class="section-divider">
+        <div class="divider-content">
+            <div class="divider-title">
+                <!-- Bottle SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <rect x="8" y="6" width="8" height="14"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                    <rect x="9" y="2" width="6" height="4"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                </svg>
+                <h2>Todos los perfumes</h2>
+            </div>
+            <p>Catálogo completo actualizado</p>
+        </div>
+    </section>
+
+    <section class="perfume-section">
+        <div class="perfume-container" id="todos-container"></div>
+
+        <div class="load-more-container">
+            <button id="load-more" class="btn-secondary">
+                Ver más perfumes
+            </button>
+        </div>
+    </section>
+
+    <!-- SEPARADOR COMO COMPRAR -->
+    <section class="section-divider">
+        <div class="divider-content">
+            <div class="divider-title">
+                <!-- Shield SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L4 6V12C4 17 8 20 12 22C16 20 20 17 20 12V6L12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                </svg>
+                <h2>Cómo identificar un perfume original</h2>
+            </div>
+            <p>Guía rápida para comprar seguro en Mercado Libre</p>
+        </div>
+    </section>
+
+    <section id="como-comprar" class="auth-section">
+    <div class="auth-container">
+
+        <!-- Original -->
+        <div class="auth-card good">
+            <h3>Señales de un perfume original</h3>
+            <ul>
+                <li>Vendido solo por tiendas de la lista oficial mostrada abajo.</li>
+                <li>Precio coherente con el mercado.</li>
+            </ul>
+        </div>
+
+        <!-- Sospechoso -->
+        <div class="auth-card warning">
+            <h3>Señales de alerta</h3>
+            <ul>
+                <li>Precio demasiado bajo comparado con otras tiendas (menor a $900).</li>
+                <li>Vendedor con nombre raros, letras y números</li>
+                <li>Vendedor verificado pero a precios bajísimos</li>
+            </ul>
+        </div>
+        
+
+    </div>
+</section>
+
+    <!-- SEPARADOR TIENDAS -->
+    <section class="section-divider">
+        <div class="divider-content">
+            <div class="divider-title">
+                <!-- Store SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="8" width="18" height="12"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                    <path d="M3 8L6 4H18L21 8"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                </svg>
+                <h2>Tiendas recomendadas</h2>
+            </div>
+            <p>Vendedores confiables dentro de Mercado Libre</p>
+        </div>
+    </section>
+
+    <section id="tiendas" class="store-section">
+        <div class="store-container">
+
+            <!-- Tienda Card -->
+            <div class="store-card fade-in">
+                <img src="assets/img/ref.png" alt="Tienda Oficial Paco Rabanne">
+                
+                <div class="store-info">
+                    <h3>Tiendas confiables</h3>
+                    <p>Reputación buena, miles de ventas verificadas y productos originales. Fuera de esta lista de vendedores NO comprar</p>
+
+                    <div class="store-links">
+                        <a href="https://meli.la/1oetRyv" target="_blank" class="btn-secondary">
+                            Ver perfumes de hombre
+                        </a>
+                        <a href="https://meli.la/1MBiDUk" target="_blank" class="btn-secondary">
+                            Ver perfumes de mujer
+                        </a>
+                        <a href="https://www.tiktok.com/@elgueydelosperfumes/video/7590893923208400149?is_from_webapp=1&sender_device=pc&web_id=7580791809245480459" target="_blank" class="btn-primary">
+                            Ver referencia en TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEPARADOR SOBRE MI -->
+    <section class="section-divider">
+        <div class="divider-content">
+            <div class="divider-title">
+                <!-- User SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="8" r="4"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                    <path d="M4 22C4 17 8 14 12 14C16 14 20 17 20 22"
+                        stroke="currentColor"
+                        stroke-width="2"/>
+                </svg>
+                <h2>Sobre mí</h2>
+            </div>
+            <p>Quién está detrás de estas recomendaciones</p>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="about-section">
+    <div class="about-container">
+
+        <div class="about-content">
+            <p>
+                Analizo tendencias, ofertas y reputación de vendedores en Mercado Libre
+                para ayudarte a encontrar perfumes originales sin caer en imitaciones.
+            </p>
+
+            <p>
+                Esta página no vende productos directamente. Funciona como una guía
+                actualizada donde selecciono tiendas confiables y perfumes en tendencia.
+            </p>
+
+            <p>
+                Comparto contenido sobre perfumes y recomendaciones en TikTok,
+                donde explico cómo identificar ofertas reales y vendedores seguros.
+            </p>
+
+            <div class="about-links">
+                <a href="https://www.tiktok.com/@johnbga17?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-primary">
+                    Ver TikTok
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>
+            Como afiliado de Mercado Libre puedo recibir una comisión por compras realizadas mediante estos enlaces.
+        </p>
+        <p>© 2026 Perfume Radar</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
