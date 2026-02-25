@@ -59,7 +59,7 @@
     "imagen": "assets/img/badboy.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": true,
+    "tendencia": false,
     "categoria": "hombre"
   },
   {
@@ -203,7 +203,7 @@
     "imagen": "assets/img/gg.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": true,
+    "tendencia": false,
     "categoria": "mujer"
   },
   {
@@ -230,13 +230,31 @@
     "imagen": "assets/img/ip.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": true,
+    "tendencia": false,
     "categoria": "hombre"
   },
   {
     "nombre": "versace eros edp",
     "vendedor": "Amora Beauty Market",
     "imagen": "assets/img/ve.png",
+    "link": "https://meli.la/1oetRyv",
+    "fecha": "2026-02-24",
+    "tendencia": true,
+    "categoria": "hombre"
+  },
+  {
+    "nombre": "odyssey bahamas",
+    "vendedor": "Armaf",
+    "imagen": "assets/img/ob.png",
+    "link": "https://meli.la/1oetRyv",
+    "fecha": "2026-02-24",
+    "tendencia": true,
+    "categoria": "hombre"
+  },
+  {
+    "nombre": "azzaro",
+    "vendedor": "The Fragrance",
+    "imagen": "assets/img/az.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
     "tendencia": true,
