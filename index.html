@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfume Radar | Perfumes originales en Mercado Libre</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.1">
 </head>
 <body>
 
@@ -14,12 +14,12 @@
             <div class="logo">PERFUME OFERTAS</div>
 
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-    <svg class="hamburger" width="26" height="26" viewBox="0 0 24 24">
-        <line class="line top" x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <line class="line middle" x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <line class="line bottom" x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-</button>
+                <svg class="hamburger" width="26" height="26" viewBox="0 0 24 24">
+                    <line class="line top" x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line class="line middle" x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line class="line bottom" x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
 
             <nav class="nav-links" id="nav-links">
                 <a href="#inicio">Inicio</a>
@@ -37,9 +37,9 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>
-    Encuentra perfumes <span class="hero-highlight">originales</span><br>
-    en Mercado Libre
-</h1>
+                Encuentra perfumes <span class="hero-highlight">originales</span><br>
+                en Mercado Libre
+            </h1>
             <p>Solo tiendas verificadas y ofertas reales actualizadas constantemente.</p>
         </div>
     </section>
@@ -51,7 +51,7 @@
             <!-- JS insertará aquí las tarjetas -->
         </div>
     </div>
-</section>
+    </section>
 
     <!-- SEPARADOR TODOS -->
     <section class="section-divider">
@@ -62,6 +62,12 @@
             <p>Catálogo completo actualizado</p>
         </div>
     </section>
+
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="hombre">Hombre</button>
+        <button class="filter-btn" data-filter="mujer">Mujer</button>
+    </div>
 
     <section class="perfume-section">
         <div class="perfume-container" id="todos-container"></div>
@@ -86,11 +92,7 @@
     <section id="como-comprar" class="auth-section">
     <div class="auth-wrapper">
 
-        <div class="auth-header">
-            <h3>Cómo identificar un perfume original</h3>
-            <p>Guía rápida para evitar imitaciones en Mercado Libre</p>
-        </div>
-
+       
         <div class="auth-grid">
 
             <div class="auth-column">
@@ -104,7 +106,7 @@
             <div class="auth-column">
                 <h4 class="auth-title warning">Señales de alerta</h4>
                 <ul>
-                   <li>Precio demasiado bajo comparado con otras tiendas (menor a $900).</li>
+                   <li>Precio demasiado bajo comparado con otras tiendas (menor a $900) dependiendo el perfume si es diseñador 'alerta roja', si es árabe sigue correcto.</li>
                 <li>Vendedor con nombre raros, letras y números</li>
                 <li>Vendedor verificado pero a precios bajísimos</li>
                 </ul>
@@ -134,7 +136,8 @@
                 
                 <div class="store-info">
                     <h3>Tiendas confiables</h3>
-                    <p>Reputación buena, miles de ventas verificadas y productos originales. Fuera de esta lista de vendedores NO comprar</p>
+                    <p>Reputación buena, miles de ventas verificadas y productos originales. FUERA de esta lista de vendedores NO comprar.</p>
+                    <p>Si quieres ver todos los perfumes u ofertas posibles oprime los botones para verlos</p>
 
                     <div class="store-links">
                         <a href="https://meli.la/1oetRyv" target="_blank" class="btn-secondary">
@@ -168,38 +171,65 @@
 
         <div class="about-content">
             <p>
-                Analizo tendencias, ofertas y reputación de vendedores en Mercado Libre
+                Analizo ofertas en Mercado Libre
                 para ayudarte a encontrar perfumes originales sin caer en imitaciones.
             </p>
-
             <p>
                 Esta página no vende productos directamente. Funciona como una guía
                 actualizada donde selecciono tiendas confiables y perfumes en tendencia.
             </p>
-
-            <p>
-                Comparto contenido sobre perfumes y recomendaciones en TikTok,
-                donde explico cómo identificar ofertas reales y vendedores seguros.
-            </p>
-
+             
             <div class="about-links">
                 <a href="https://www.tiktok.com/@johnbga17?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-primary">
-                    Ver TikTok
+                    Ver mi TikTok
                 </a>
             </div>
+
+            <div class="about-links">
+                <a href="https://meli.la/1oetRyv"
+                    target="_blank"
+                    class="btn-primary">
+                    Ver mi lista completa en ML
+                </a>
+            </div>
+            <div class="about-links">
+                <a href="https://whatsapp.com/channel/0029VbCCStMAjPXTnn4E9T20"
+                    target="_blank"
+                    class="btn-whatsapp">
+                        Unirme al canal de WhatsApp
+                </a>
+            </div>
+
+            <!-- Imagen perfil ML -->
+            <div class="about-image">
+                <img src="assets/img/perfil.jpeg"
+                     alt="Perfil Mercado Libre">
+            </div>
         </div>
+        
 
     </div>
 </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>
+        <!-- <p>
             Como afiliado de Mercado Libre puedo recibir una comisión por compras realizadas mediante estos enlaces.
-        </p>
-        <p>© 2026 Perfume Radar</p>
+        </p> -->
+        <p>© 2026 Cazador de ofertas en perfumes</p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <a href="https://whatsapp.com/channel/0029VbCCStMAjPXTnn4E9T20"
+   target="_blank"
+   class="whatsapp-float"
+   aria-label="Canal de WhatsApp">
+
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+        <path d="M20.52 3.48A11.88 11.88 0 0012.01 0C5.38 0 .02 5.36 0 11.99c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62a11.94 11.94 0 005.83 1.49h.01c6.63 0 11.99-5.36 11.99-11.99 0-3.2-1.25-6.2-3.49-8.4z"/>
+    </svg>
+
+</a>
+
+    <script src="assets/js/main.js?v=1.1"></script>
 </body>
 </html>

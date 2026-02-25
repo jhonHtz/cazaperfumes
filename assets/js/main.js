@@ -7,14 +7,14 @@ const todosContainer = document.getElementById("todos-container");
 const loadMoreBtn = document.getElementById("load-more");
 
 let perfumesData = [];
-let visibleCount = 5;
-
+let visibleCount = 4;
+let currentFilter = "todos";
 
 // ============================
 // FETCH JSON
 // ============================
 
-fetch("assets/js/perfumes.json")
+fetch("assets/js/perfumes.json?v=1.1")
     .then(response => response.json())
     .then(data => {
         perfumesData = data;
@@ -74,29 +74,41 @@ function renderTendencias() {
 function renderTodos() {
     todosContainer.innerHTML = "";
 
+    // Excluir tendencias
     const restantes = perfumesData.filter(p => !p.tendencia);
 
-    restantes.slice(0, visibleCount).forEach(perfume => {
+    // Aplicar filtro
+    let filtrados = restantes;
+
+    if (currentFilter !== "todos") {
+        filtrados = restantes.filter(p => p.categoria === currentFilter);
+    }
+
+    // Mostrar solo los visibles
+    const visibles = filtrados.slice(0, visibleCount);
+
+    visibles.forEach(perfume => {
         const card = createCard(perfume);
         todosContainer.appendChild(card);
     });
 
-    if (visibleCount >= restantes.length) {
+    // Mostrar u ocultar botón
+    if (visibleCount >= filtrados.length) {
         loadMoreBtn.style.display = "none";
+    } else {
+        loadMoreBtn.style.display = "block";
     }
 }
-
 
 // ============================
 // BOTÓN VER MÁS
 // ============================
 
 loadMoreBtn.addEventListener("click", () => {
-    visibleCount += 12;
+    visibleCount += 4;
     renderTodos();
     initObserver();
 });
-
 
 // ============================
 // FADE-IN CON INTERSECTION OBSERVER
@@ -155,4 +167,19 @@ document.addEventListener("click", () => {
 // Evitar cierre si se toca dentro del menú
 navLinks.addEventListener("click", (e) => {
     e.stopPropagation();
+});
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        currentFilter = btn.dataset.filter;
+        visibleCount = 4; // reset al cambiar filtro
+        renderTodos();
+        initObserver();
+    });
 });

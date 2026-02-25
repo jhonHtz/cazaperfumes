@@ -5,7 +5,8 @@
     "imagen": "assets/img/1millionelixir.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "Versace Eros EDT",
@@ -13,7 +14,8 @@
     "imagen": "assets/img/versaceedt.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "Versace dylan blue",
@@ -21,7 +23,8 @@
     "imagen": "assets/img/dylanblue.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "K intense",
@@ -29,7 +32,8 @@
     "imagen": "assets/img/k.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "Versace Pour Homme",
@@ -37,7 +41,8 @@
     "imagen": "assets/img/versacep.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "Invictus edt",
@@ -45,7 +50,8 @@
     "imagen": "assets/img/invictus.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "bad boy cobalt",
@@ -53,7 +59,8 @@
     "imagen": "assets/img/badboy.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": true
+    "tendencia": true,
+    "categoria": "hombre"
   },
   {
     "nombre": "scandal le parfum",
@@ -61,7 +68,8 @@
     "imagen": "assets/img/sp.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "invictus elixir",
@@ -69,7 +77,8 @@
     "imagen": "assets/img/ie.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "scandal absolu",
@@ -77,7 +86,8 @@
     "imagen": "assets/img/sa.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "stronger with you edt",
@@ -85,7 +95,8 @@
     "imagen": "assets/img/stw.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "1 million royal",
@@ -93,7 +104,8 @@
     "imagen": "assets/img/1r.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "light blue",
@@ -101,7 +113,8 @@
     "imagen": "assets/img/lb.png",
     "link": "https://meli.la/1oetRyv",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "hombre"
   },
   {
     "nombre": "libre edp",
@@ -109,7 +122,8 @@
     "imagen": "assets/img/ledp.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "black opium glitter",
@@ -117,7 +131,8 @@
     "imagen": "assets/img/bog.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "fame parfum",
@@ -125,7 +140,8 @@
     "imagen": "assets/img/f.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "fame intense",
@@ -133,7 +149,8 @@
     "imagen": "assets/img/fi.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "devotion",
@@ -141,7 +158,8 @@
     "imagen": "assets/img/dedp.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "good girl blush elixir",
@@ -149,7 +167,8 @@
     "imagen": "assets/img/ggbe.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "1 million edp",
@@ -157,7 +176,8 @@
     "imagen": "assets/img/1mu.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "212 vip rosé",
@@ -165,7 +185,8 @@
     "imagen": "assets/img/212m.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "212 vip intense",
@@ -173,7 +194,8 @@
     "imagen": "assets/img/212i.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "good girl",
@@ -181,7 +203,8 @@
     "imagen": "assets/img/gg.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": true
+    "tendencia": true,
+    "categoria": "mujer"
   },
   {
     "nombre": "1 million royal mujer",
@@ -189,7 +212,8 @@
     "imagen": "assets/img/1rm.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
   },
   {
     "nombre": "versace bright crystal",
@@ -197,7 +221,26 @@
     "imagen": "assets/img/bc.png",
     "link": "https://meli.la/1MBiDUk",
     "fecha": "2026-02-24",
-    "tendencia": false
+    "tendencia": false,
+    "categoria": "mujer"
+  },
+  {
+    "nombre": "invictus parfum",
+    "vendedor": "Amora Beauty Market",
+    "imagen": "assets/img/ip.png",
+    "link": "https://meli.la/1oetRyv",
+    "fecha": "2026-02-24",
+    "tendencia": true,
+    "categoria": "hombre"
+  },
+  {
+    "nombre": "versace eros edp",
+    "vendedor": "Amora Beauty Market",
+    "imagen": "assets/img/ve.png",
+    "link": "https://meli.la/1oetRyv",
+    "fecha": "2026-02-24",
+    "tendencia": true,
+    "categoria": "hombre"
   }
   
 ]

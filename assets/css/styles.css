@@ -197,9 +197,9 @@ h2 {
 .btn-primary {
     background: var(--primary);
     color: white;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.3rem;
     border-radius: 10px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.25s ease;
@@ -213,7 +213,7 @@ h2 {
     background: white;
     border: 2px solid var(--primary);
     color: var(--primary-dark);
-    padding: 0.8rem 1.4rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
@@ -231,7 +231,7 @@ h2 {
 ========================= */
 .section-divider {
     max-width: 1100px;
-    margin: 4rem auto 2rem auto;
+    margin: 2rem auto 2rem auto;
     padding: 0 2rem;
     position: relative;
 }
@@ -604,6 +604,46 @@ h2 {
 
 .about-links {
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.about-image img {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+}
+/* =========================
+   BOTÓN WHATSAPP
+========================= */
+
+.btn-whatsapp {
+    background: #25d365d0;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5edc;
+    transform: translateY(-2px);
+}
+
+.about-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Desktop */
+
+@media (min-width: 900px) {
+    .about-buttons {
+        flex-direction: row;
+    }
 }
 /* =========================
    TENDENCIAS DESTACADAS
@@ -669,4 +709,77 @@ h2 {
     display: flex;
     justify-content: center;
     background: #ffffff;
+}
+/* =========================
+   FILTRO CATEGORÍAS
+========================= */
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(15,23,42,0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    z-index: 2000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* Pulse animation */
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37,211,102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102, 0);
+    }
+}
+
+.whatsapp-float {
+    animation: whatsappPulse 2.5s infinite;
 }
