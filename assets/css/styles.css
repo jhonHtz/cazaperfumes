@@ -13,26 +13,38 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #111111;
-    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    background: #F1F5F9;
+    color: #0F172A;
+    line-height: 1.7;
 }
-
+section {
+    width: 100%;
+    padding: 1rem 0.5rem;
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+.highlight {
+    color: var(--primary);
+    font-weight: 800;
+}
 /* =========================
    VARIABLES
 ========================= */
-
 :root {
-    --primary: #6366F1;
-    --primary-dark: #4F46E5;
-    --accent: #8B5CF6;
-    --text-main: #051431;
-    --text-muted: #6B7280;
-    --bg-soft: #F3F4FF;
-    --shadow-soft: 0 10px 30px rgba(99,102,241,0.15);
+    --primary: #2563EB;       /* azul vibrante elegante */
+    --primary-dark: #1D4ED8;
+    --accent: #7C3AED;        /* violeta moderno */
+    --text-main: #0F172A;
+    --text-muted: #64748B;
 }
-
 /* =========================
    NAVBAR
 ========================= */
@@ -130,72 +142,73 @@ body {
 /* =========================
    HERO IMPACTANTE
 ========================= */
-
 .hero {
-    position: relative;
-    padding: 80px 1.5rem 30px;
     text-align: center;
-    overflow: hidden;
-    background: linear-gradient(
-        135deg,
-        rgba(99,102,241,0.12),
-        rgba(139,92,246,0.12)
-    );
+    margin-bottom: 15px;
+    padding: 5rem 2rem;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
 }
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    filter: blur(80px);
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.hero-highlight {
+    color: var(--primary);
+    font-weight: 800;
+}
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
 }
-.hero h1 {
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    background-clip: text;              /* estándar */
-    -webkit-background-clip: text; 
+
+.tendencias-section {
+    width: 100%;
+    background: #E0E7FF;
 }
 
-.hero p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-}
+@media (min-width: 768px) {
 
+    .tendencias-section {
+        max-width: 1100px;
+        margin: 4rem auto;
+        border-radius: 24px;
+    }
+
+    .section-divider {
+        max-width: 1100px;
+        margin: 4rem auto 2rem auto;
+    }
+
+}
 /* =========================
    BOTONES
 ========================= */
-
 .btn-primary {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: var(--primary);
     color: white;
-    padding: 0.9rem 1.4rem;
-    border-radius: 12px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 16px;
     text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 8px 25px rgba(99,102,241,0.35);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(99,102,241,0.45);
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
-
 .btn-secondary {
     background: white;
     border: 2px solid var(--primary);
@@ -216,44 +229,40 @@ body {
 /* =========================
    SEPARADORES
 ========================= */
-
 .section-divider {
-    background: linear-gradient(
-        135deg,
-        rgba(99,102,241,0.08),
-        rgba(139,92,246,0.08)
-    );
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-    margin-top: 3rem;
-    border-top: 1px solid rgba(99,102,241,0.15);
-    border-bottom: 1px solid rgba(99,102,241,0.15);
+    max-width: 1100px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.section-divider::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 0.8rem;
+    border-radius: 10px;
+}
+
+.section-divider h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.section-divider p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
 }
 
 .divider-title {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
 }
-
-.section-divider h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-
-    background-clip: text;              /* estándar */
-    -webkit-background-clip: text;      /* Safari / Chrome */
-
-    color: transparent;
-}
-
-.section-divider p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
 /* =========================
    PERFUME SECTIONS
 ========================= */
@@ -273,25 +282,23 @@ body {
 /* =========================
    TARJETA PERFUME
 ========================= */
-
 .perfume-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: var(--shadow-soft);
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
     overflow: hidden;
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
 }
 
+.perfume-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
 .perfume-card.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-.perfume-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(99,102,241,0.18);
 }
 
 .perfume-card img {
@@ -462,64 +469,88 @@ body {
     }
 }
 /* =========================
-   AUTH SECTION
+   AUTH NUEVO DISEÑO
 ========================= */
 
 .auth-section {
-    padding: 2rem 1.5rem;
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.05);
 }
 
-.auth-container {
-    max-width: 900px;
-    margin: auto;
+.auth-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.auth-grid {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.auth-card {
-    padding: 1.8rem;
-    border-radius: 18px;
-    background: white;
-    box-shadow: var(--shadow-soft);
-    transition: all 0.3s ease;
+.auth-column h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-.auth-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Original */
-
-.auth-card.good {
-    border-left: 6px solid #22C55E;
-}
-
-.auth-card.good h3 {
+.auth-title.good {
     color: #16A34A;
 }
 
-/* Advertencia */
-
-.auth-card.warning {
-    border-left: 6px solid #EF4444;
-}
-
-.auth-card.warning h3 {
+.auth-title.warning {
     color: #DC2626;
 }
 
-.auth-card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+.auth-column ul {
+    list-style: none;
+    padding: 0;
 }
 
-.auth-card ul {
-    list-style: disc;
-    padding-left: 1.5rem;
+.auth-column li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
     color: var(--text-muted);
 }
 
+.auth-title.good + ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #16A34A;
+    font-weight: bold;
+}
+
+.auth-title.warning + ul li::before {
+    content: "✖";
+    position: absolute;
+    left: 0;
+    color: #DC2626;
+    font-weight: bold;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .auth-grid {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .auth-column {
+        width: 50%;
+    }
+}
 /* Desktop */
 
 @media (min-width: 768px) {
@@ -573,4 +604,69 @@ body {
 
 .about-links {
     margin-top: 1.5rem;
+}
+/* =========================
+   TENDENCIAS DESTACADAS
+========================= */
+
+.tendencias-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.tendencias-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.tendencias-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tendencias-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* Tarjetas horizontales más compactas */
+
+.tendencias-carousel .perfume-card {
+    min-width: 310px;
+    max-width: 380px;
+    scroll-snap-align: start;
+    opacity: 1;
+    transform: none;
+}
+
+/* Imagen tendencias horizontal correcta */
+.tendencias-carousel .perfume-card img {
+    width: 105%;
+    height: auto;
+    object-fit: contain;
+}
+/* Badge oferta */
+
+.badge-oferta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(239,68,68,0.4);
+}
+.image-wrapper {
+    position: relative;
+    align-items: flex-end;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
 }

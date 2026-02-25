@@ -33,12 +33,15 @@ fetch("assets/js/perfumes.json")
 // CREAR TARJETA
 // ============================
 
-function createCard(perfume) {
+function createCard(perfume, isTendencia = false) {
     const card = document.createElement("div");
     card.classList.add("perfume-card");
 
     card.innerHTML = `
-        <img src="${perfume.imagen}" alt="${perfume.nombre}">
+        <div class="image-wrapper">
+            ${isTendencia ? `<span class="badge-oferta">Oferta Relámpago</span>` : ""}
+            <img src="${perfume.imagen}" alt="${perfume.nombre}">
+        </div>
         <div class="perfume-info">
             <h3>${perfume.nombre}</h3>
             <p>Vendido por: ${perfume.vendedor}</p>
@@ -55,16 +58,14 @@ function createCard(perfume) {
 // ============================
 // RENDER TENDENCIAS
 // ============================
-
 function renderTendencias() {
     const tendencias = perfumesData.filter(p => p.tendencia === true);
 
     tendencias.forEach(perfume => {
-        const card = createCard(perfume);
+        const card = createCard(perfume, true);
         tendenciasContainer.appendChild(card);
     });
 }
-
 
 // ============================
 // RENDER TODOS
