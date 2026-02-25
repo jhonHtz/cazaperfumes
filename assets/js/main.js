@@ -14,7 +14,7 @@ let currentFilter = "todos";
 // FETCH JSON
 // ============================
 
-fetch("assets/js/perfumes.json?v=1.1")
+fetch("assets/js/perfumes.json?v=1.2")
     .then(response => response.json())
     .then(data => {
         perfumesData = data;
